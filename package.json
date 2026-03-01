@@ -1,0 +1,29 @@
+{
+  "name": "thiyaku-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Thiyaku R - Full Stack Developer & Designer",
+  "scripts": {
+    "setup": "npm install && cd frontend && npm install && cd ../backend && npm install",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build:frontend": "cd frontend && npm run build",
+    "db:migrate": "cd backend && npm run db:migrate",
+    "db:seed": "cd backend && npm run db:seed",
+    "db:reset": "cd backend && npm run db:reset"
+  },
+  "keywords": [
+    "portfolio",
+    "react",
+    "nodejs",
+    "express",
+    "mysql",
+    "sequelize",
+    "full-stack"
+  ],
+  "author": "Thiyaku R",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/portfolio"
+  }
+}
