@@ -35,7 +35,7 @@ const Contact = () => {
             console.log('Backend not available, showing alternative contact info');
             setStatus({ 
                 type: 'info', 
-                message: 'Please contact me directly at: thiyakur@example.com or connect on LinkedIn.' 
+                message: 'Thank you for your message! Please reach me directly at thiyakur@example.com or connect on LinkedIn: linkedin.com/in/thiyakur' 
             });
             // Still clear the form
             setFormData({ name: '', email: '', message: '' });
