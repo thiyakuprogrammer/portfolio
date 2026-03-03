@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import SectionHeading from '../components/SectionHeading';
 import ProjectCard from '../components/ProjectCard';
 import { getProjects } from '../services/api';
+import { mockProjects } from '../services/mockData';
 
 const Portfolio = () => {
     const [projects, setProjects] = useState([]);
@@ -13,11 +14,14 @@ const Portfolio = () => {
         const fetchProjects = async () => {
             try {
                 setLoading(true);
+                
+                // Try to fetch from API first
                 const data = await getProjects();
                 setProjects(data);
             } catch (err) {
-                setError('Failed to load projects. Please try again later.');
-                console.error(err);
+                // If API fails, use mock data (for Netlify deployment without backend)
+                console.log('API not available, using mock data');
+                setProjects(mockProjects);
             } finally {
                 setLoading(false);
             }
@@ -58,7 +62,7 @@ const Portfolio = () => {
                 </div>
             )}
 
-            {!loading && !error && (
+            {!loading && projects.length > 0 && (
                 <div className="projects-grid" style={{
                     display: 'grid',
                     gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))',
@@ -70,7 +74,7 @@ const Portfolio = () => {
                 </div>
             )}
 
-            {!loading && !error && projects.length === 0 && (
+            {!loading && projects.length === 0 && (
                 <div className="empty-state glass-panel" style={{ 
                     padding: '3rem', 
                     textAlign: 'center',

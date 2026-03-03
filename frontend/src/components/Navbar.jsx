@@ -1,12 +1,20 @@
 import { NavLink } from 'react-router-dom';
 import { Home, User, Code, FileText, Send, BookOpen, Download } from 'lucide-react';
+import profileImage from '../asserts/img.png';
 import './Navbar.css';
 
 const Navbar = () => {
     return (
         <nav className="sidebar glass-panel">
             <div className="profile-section">
-                <div className="avatar">TR</div>
+                <div className="avatar">
+                    <img src={profileImage} alt="Thiyaku R" style={{ 
+                        width: '100%', 
+                        height: '100%', 
+                        objectFit: 'cover',
+                        borderRadius: '50%'
+                    }} />
+                </div>
                 <h2 className="name">Thiyaku R</h2>
                 <p className="title">Freelancing Web Developer</p>
             </div>

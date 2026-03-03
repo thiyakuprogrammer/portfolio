@@ -26,11 +26,19 @@ const Contact = () => {
         setStatus({ type: '', message: '' });
 
         try {
+            // Try to submit to backend API
             await submitContactForm(formData);
             setStatus({ type: 'success', message: 'Message sent successfully! I\'ll get back to you soon.' });
             setFormData({ name: '', email: '', message: '' });
         } catch (error) {
-            setStatus({ type: 'error', message: 'Failed to send message. Please try again.' });
+            // If backend is not available (Netlify deployment), show alternative message
+            console.log('Backend not available, showing alternative contact info');
+            setStatus({ 
+                type: 'info', 
+                message: 'Please contact me directly at: thiyakur@example.com or connect on LinkedIn.' 
+            });
+            // Still clear the form
+            setFormData({ name: '', email: '', message: '' });
         } finally {
             setLoading(false);
         }
@@ -155,9 +163,15 @@ const Contact = () => {
                         padding: '1rem',
                         borderRadius: 'var(--radius-sm)',
                         marginBottom: '1.5rem',
-                        background: status.type === 'success' ? 'rgba(34, 197, 94, 0.1)' : 'rgba(239, 68, 68, 0.1)',
-                        border: `1px solid ${status.type === 'success' ? 'rgba(34, 197, 94, 0.3)' : 'rgba(239, 68, 68, 0.3)'}`,
-                        color: status.type === 'success' ? '#22c55e' : '#ef4444'
+                        background: status.type === 'success' ? 'rgba(34, 197, 94, 0.1)' : 
+                                   status.type === 'info' ? 'rgba(59, 130, 246, 0.1)' : 
+                                   'rgba(239, 68, 68, 0.1)',
+                        border: `1px solid ${status.type === 'success' ? 'rgba(34, 197, 94, 0.3)' : 
+                                             status.type === 'info' ? 'rgba(59, 130, 246, 0.3)' : 
+                                             'rgba(239, 68, 68, 0.3)'}`,
+                        color: status.type === 'success' ? '#22c55e' : 
+                               status.type === 'info' ? '#3b82f6' : 
+                               '#ef4444'
                     }}>
                         {status.message}
                     </div>

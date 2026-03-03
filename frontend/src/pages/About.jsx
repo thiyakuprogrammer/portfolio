@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import SectionHeading from '../components/SectionHeading';
 import './About.css';
+import logo from "../asserts/img.png";
 
 const About = () => {
     return (
@@ -33,7 +34,12 @@ const About = () => {
 
                 <div className="about-image-container">
                     <div className="about-image">
-                        <span className="placeholder-text">TR</span>
+                        <img src={logo} alt="Thiyaku R" style={{ 
+                            width: '100%', 
+                            height: '100%', 
+                            objectFit: 'cover',
+                            borderRadius: 'var(--radius-lg)'
+                        }} />
                     </div>
                 </div>
             </div>
