@@ -60,39 +60,92 @@ const Resume = () => {
                     <Briefcase size={28} /> Experience
                 </h2>
 
-                <div className="resume-item" style={{ marginBottom: '2rem' }}>
-                    <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>Freelance Web Developer</h3>
-                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem', fontSize: '0.95rem' }}>
-                        2023 - Present
+                {/* ── 2024 ── */}
+                <div className="resume-item" style={{
+                    marginBottom: '2rem',
+                    paddingBottom: '2rem',
+                    borderBottom: '1px solid var(--glass-border)'
+                }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.75rem' }}>
+                        <h3 style={{ fontSize: '1.2rem', color: 'var(--text-primary)' }}>Freelance Web Developer</h3>
+                        <span style={{
+                            background: 'rgba(59,130,246,0.1)',
+                            color: 'var(--accent-color)',
+                            padding: '0.2rem 0.75rem',
+                            borderRadius: 'var(--radius-sm)',
+                            fontSize: '0.85rem',
+                            fontWeight: '500',
+                            border: '1px solid rgba(59,130,246,0.2)',
+                            whiteSpace: 'nowrap'
+                        }}>2024</span>
+                    </div>
+                    <p style={{ color: 'var(--accent-color)', fontSize: '0.9rem', marginBottom: '0.75rem', fontWeight: '500' }}>
+                        Self-Employed · Remote
                     </p>
-                    <ul style={{ 
-                        color: 'var(--text-secondary)', 
-                        paddingLeft: '1.5rem',
-                        lineHeight: '1.8'
-                    }}>
-                        <li>Developing responsive web applications using React and modern JavaScript</li>
-                        <li>Creating bold, minimalist layouts that help brands tell their stories</li>
-                        <li>Working with clients to deliver custom web solutions</li>
-                        <li>Implementing full-stack features with Node.js and MySQL</li>
+                    <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.25rem', lineHeight: '1.9', fontSize: '0.95rem' }}>
+                        <li>Built and delivered responsive React web applications for freelance clients</li>
+                        <li>Integrated REST APIs and backend services using Node.js and Express</li>
+                        <li>Designed clean, minimalist UI layouts with a focus on user experience</li>
+                        <li>Managed full project lifecycle from requirement gathering to deployment</li>
                     </ul>
                 </div>
 
-                <div className="resume-item">
-                    <h3 style={{ fontSize: '1.3rem', marginBottom: '0.5rem' }}>Graphic Designer</h3>
-                    <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem', fontSize: '0.95rem' }}>
-                        2022 - Present
+                {/* ── 2025 ── */}
+                <div className="resume-item" style={{
+                    marginBottom: '2rem',
+                    paddingBottom: '2rem',
+                    borderBottom: '1px solid var(--glass-border)'
+                }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.75rem' }}>
+                        <h3 style={{ fontSize: '1.2rem', color: 'var(--text-primary)' }}>Graphic Designer</h3>
+                        <span style={{
+                            background: 'rgba(59,130,246,0.1)',
+                            color: 'var(--accent-color)',
+                            padding: '0.2rem 0.75rem',
+                            borderRadius: 'var(--radius-sm)',
+                            fontSize: '0.85rem',
+                            fontWeight: '500',
+                            border: '1px solid rgba(59,130,246,0.2)',
+                            whiteSpace: 'nowrap'
+                        }}>2025</span>
+                    </div>
+                    <p style={{ color: 'var(--accent-color)', fontSize: '0.9rem', marginBottom: '0.75rem', fontWeight: '500' }}>
+                        Freelance · Adobe Creative Suite
                     </p>
-                    <ul style={{ 
-                        color: 'var(--text-secondary)', 
-                        paddingLeft: '1.5rem',
-                        lineHeight: '1.8'
-                    }}>
-                        <li>Designing visual content using Adobe Creative Suite</li>
-                        <li>Creating brand identities and marketing materials</li>
-                        <li>Collaborating with clients to understand their vision</li>
-                        <li>Delivering high-quality design assets for web and print</li>
+                    <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.25rem', lineHeight: '1.9', fontSize: '0.95rem' }}>
+                        <li>Created brand identities, logos, and visual systems for small businesses</li>
+                        <li>Designed social media graphics, posters, and marketing collateral</li>
+                        <li>Worked closely with clients to translate ideas into compelling visuals</li>
+                        <li>Delivered print-ready and web-optimised design assets on tight deadlines</li>
                     </ul>
                 </div>
+
+                {/* ── 2026 ── */}
+                <div className="resume-item">
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.75rem' }}>
+                        <h3 style={{ fontSize: '1.2rem', color: 'var(--text-primary)' }}>Full Stack Developer & UI Designer</h3>
+                        <span style={{
+                            background: 'rgba(34,197,94,0.1)',
+                            color: '#22c55e',
+                            padding: '0.2rem 0.75rem',
+                            borderRadius: 'var(--radius-sm)',
+                            fontSize: '0.85rem',
+                            fontWeight: '500',
+                            border: '1px solid rgba(34,197,94,0.2)',
+                            whiteSpace: 'nowrap'
+                        }}>2026 · Present</span>
+                    </div>
+                    <p style={{ color: 'var(--accent-color)', fontSize: '0.9rem', marginBottom: '0.75rem', fontWeight: '500' }}>
+                        Freelancer · SRM MCET
+                    </p>
+                    <ul style={{ color: 'var(--text-secondary)', paddingLeft: '1.25rem', lineHeight: '1.9', fontSize: '0.95rem' }}>
+                        <li>Developing full-stack portfolio and client projects using React, Node.js, and MySQL</li>
+                        <li>Combining design and engineering skills to build premium, dark-themed web products</li>
+                        <li>Exploring advanced UI patterns — glassmorphism, micro-animations, and responsive grids</li>
+                        <li>Actively seeking internship and collaborative opportunities in web development</li>
+                    </ul>
+                </div>
+
             </div>
 
             <div className="resume-section glass-panel" style={{ padding: '2.5rem' }}>
