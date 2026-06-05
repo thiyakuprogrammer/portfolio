@@ -1,0 +1,25 @@
+.section-heading {
+    font-size: 2.5rem;
+    font-weight: 800;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.6rem;
+    cursor: default;
+}
+
+/* The underline bar */
+.heading-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 60px;                        /* starts short */
+    background: var(--accent-color);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* smooth slide */
+}
+
+/* On hover → expand to full text width */
+.section-heading:hover .heading-underline {
+    width: 100%;
+}

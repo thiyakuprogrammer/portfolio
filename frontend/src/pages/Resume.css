@@ -1,0 +1,306 @@
+/* ── Resume Page Layout ── */
+.resume-page {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+/* ── Download Row ── */
+.resume-download-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+/* ── Shared Card ── */
+.resume-card {
+    padding: 2rem 2.25rem;
+    margin-bottom: 1.25rem;
+}
+
+/* ── Section Title (inside cards) ── */
+.resume-section-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+/* ── Profile Header ── */
+.resume-profile-header {
+    margin-bottom: 1.25rem;
+}
+
+.resume-name {
+    font-size: 1.9rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.resume-role-tag {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-top: 0.3rem;
+    letter-spacing: 0.5px;
+}
+
+/* ── Contact Info ── */
+.resume-contacts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 2rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.resume-contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+}
+
+.resume-contact-item a {
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.resume-contact-item a:hover {
+    color: var(--accent-color);
+}
+
+.contact-icon {
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+}
+
+/* ── Bio ── */
+.resume-bio {
+    color: var(--text-secondary);
+    line-height: 1.85;
+    font-size: 0.93rem;
+}
+
+/* ── Education ── */
+.resume-edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.resume-edu-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.resume-inst {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.resume-sub {
+    font-size: 0.92rem;
+    color: var(--text-secondary);
+}
+
+.resume-gpa {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-top: 0.1rem;
+}
+
+/* ── Badges ── */
+.resume-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(59, 130, 246, 0.1);
+    color: var(--accent-color);
+    padding: 0.25rem 0.8rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.82rem;
+    font-weight: 600;
+    border: 1px solid rgba(59, 130, 246, 0.25);
+    white-space: nowrap;
+    height: fit-content;
+}
+
+.resume-badge.badge-green {
+    background: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+    border-color: rgba(34, 197, 94, 0.25);
+}
+
+/* ── Experience Items ── */
+.resume-exp-item {
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
+}
+
+.resume-exp-divider {
+    border-bottom: 1px solid var(--glass-border);
+    margin-bottom: 1.5rem;
+}
+
+.resume-exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.85rem;
+}
+
+.resume-exp-company {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+}
+
+.resume-exp-role {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-top: 0.2rem;
+}
+
+/* ── Bullet Points ── */
+.resume-bullets {
+    padding-left: 1.25rem;
+    margin: 0;
+    list-style: disc;
+}
+
+.resume-bullets li {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+    line-height: 1.85;
+    margin-bottom: 0.2rem;
+}
+
+.resume-bullets li::marker {
+    color: var(--accent-color);
+}
+
+/* ── Table ── */
+.resume-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.resume-table thead tr {
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.resume-table th {
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.resume-table tbody tr {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background 0.2s;
+}
+
+.resume-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.resume-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.resume-table td {
+    padding: 0.7rem 0.75rem;
+    font-size: 0.93rem;
+}
+
+.resume-table td:first-child {
+    font-weight: 600;
+    color: var(--text-primary);
+    width: 45%;
+}
+
+.resume-table td:last-child {
+    color: var(--text-secondary);
+}
+
+/* ── Languages ── */
+.resume-langs {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.lang-pill {
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    min-width: 130px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.lang-pill:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+}
+
+.lang-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.lang-level {
+    font-size: 0.82rem;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .resume-card {
+        padding: 1.5rem 1.25rem;
+    }
+
+    .resume-name {
+        font-size: 1.5rem;
+    }
+
+    .resume-edu-row,
+    .resume-exp-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-contacts {
+        gap: 0.5rem 1rem;
+    }
+
+    .resume-table th,
+    .resume-table td {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.85rem;
+    }
+}
