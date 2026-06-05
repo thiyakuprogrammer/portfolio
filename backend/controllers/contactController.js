@@ -1,5 +1,4 @@
 const { ContactMessage } = require('../models');
-const { sendSMS } = require('../services/smsService');
 
 exports.submitContactForm = async (req, res) => {
     try {
@@ -17,10 +16,7 @@ exports.submitContactForm = async (req, res) => {
         // Save to database
         const newMessage = await ContactMessage.create({ name, email, message });
 
-        // Send SMS notification (non-blocking — won't fail the response if SMS fails)
-        sendSMS({ name, email, message }).catch((err) => {
-            console.error('SMS send error (non-fatal):', err.message);
-        });
+        console.log(`📩 New contact from ${name} <${email}>`);
 
         res.status(201).json({
             message: 'Message sent successfully! I will get back to you soon.',
