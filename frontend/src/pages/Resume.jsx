@@ -7,7 +7,10 @@ const Resume = () => {
 
     const handleDownload = () => {
         const link = document.createElement('a');
-        link.href = import.meta.env.BASE_URL + 'Thiyaku-CV (1).pdf';
+        const base = import.meta.env.BASE_URL.endsWith('/')
+            ? import.meta.env.BASE_URL
+            : import.meta.env.BASE_URL + '/';
+        link.href = base + 'Thiyaku-CV.pdf';
         link.download = 'Thiyaku-R-CV.pdf';
         document.body.appendChild(link);
         link.click();
