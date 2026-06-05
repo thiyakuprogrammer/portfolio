@@ -56,17 +56,25 @@
     font-weight: 500;
     background: rgba(255, 255, 255, 0.05);
     transition: var(--transition-normal);
+    cursor: pointer;
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    font-family: inherit;
 }
 
 .btn-link:hover {
     background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255,255,255,0.2);
 }
 
 .btn-link.primary {
     background: var(--accent-color);
     color: white;
+    border-color: var(--accent-color);
 }
 
 .btn-link.primary:hover {
     background: var(--accent-hover);
+    border-color: var(--accent-hover);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
 }

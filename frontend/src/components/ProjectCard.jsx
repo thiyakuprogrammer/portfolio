@@ -3,6 +3,12 @@ import { ExternalLink, Github } from 'lucide-react';
 import './ProjectCard.css';
 
 const ProjectCard = ({ project, index }) => {
+
+    const openLink = (url) => {
+        if (!url) return;
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
+
     return (
         <motion.div
             className="project-card glass-panel"
@@ -22,12 +28,18 @@ const ProjectCard = ({ project, index }) => {
                 </div>
 
                 <div className="project-links">
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn-link">
+                    <button
+                        onClick={() => openLink(project.githubUrl)}
+                        className="btn-link"
+                    >
                         <Github size={18} /> Code
-                    </a>
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="btn-link primary">
+                    </button>
+                    <button
+                        onClick={() => openLink(project.liveUrl)}
+                        className="btn-link primary"
+                    >
                         <ExternalLink size={18} /> Live Demo
-                    </a>
+                    </button>
                 </div>
             </div>
         </motion.div>

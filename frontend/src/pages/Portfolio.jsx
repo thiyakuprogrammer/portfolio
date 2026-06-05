@@ -14,19 +14,19 @@ const Portfolio = () => {
         const fetchProjects = async () => {
             try {
                 setLoading(true);
-                
-                // Try to fetch from API first
                 const data = await getProjects();
-                setProjects(data);
+                // Use DB data only if it has real live URLs (not dummy links)
+                const hasRealLinks = data.some(p =>
+                    p.liveUrl && !p.liveUrl.includes('dummy-live-link')
+                );
+                setProjects(hasRealLinks ? data : mockProjects);
             } catch (err) {
-                // If API fails, use mock data (for Netlify deployment without backend)
-                console.log('API not available, using mock data');
+                // API not available — use mock data
                 setProjects(mockProjects);
             } finally {
                 setLoading(false);
             }
         };
-
         fetchProjects();
     }, []);
 
