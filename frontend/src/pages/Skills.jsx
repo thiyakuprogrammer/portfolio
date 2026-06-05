@@ -4,10 +4,10 @@ import SkillBadge from '../components/SkillBadge';
 
 const Skills = () => {
     const skillsList = [
-        'HTML5', 'CSS3', 'JavaScript (ES6+)', 'React', 'Vite',
-        'Node.js', 'Express', 'Python', 'UI Design', 'Figma',
+        'HTML', 'CSS', 'JavaScript ', 'React', 'Vite',
+        'Node.js', 'React Native', 'python', 'UI Design', 'Figma',
         'Adobe Creative Suite', 'Git & GitHub', 'MySQL',
-        'Sequelize ORM', 'Responsive Design', 'TailwindCSS'
+        , 'Responsive Design', 'Android Studio','Sequelize ORM'
     ];
 
     return (

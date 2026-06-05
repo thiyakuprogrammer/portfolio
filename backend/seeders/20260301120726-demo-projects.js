@@ -17,7 +17,7 @@ module.exports = {
                 title: 'CodeXGenZ Platform',
                 description: 'A developer community platform with code sharing, project showcases, and collaborative tools built for the next generation of developers.',
                 techStack: 'React, Node.js, Firebase, TailwindCSS',
-                githubUrl: 'https://github.com/thiyakuprogrammer/codexgenz',
+                githubUrl:  'https://openweathermap.org/',
                 liveUrl: 'https://react.dev/',
                 createdAt: new Date(),
                 updatedAt: new Date()
@@ -36,7 +36,7 @@ module.exports = {
                 description: 'Real-time weather forecasting with location-based predictions, 7-day forecast, interactive maps, and severe weather alerts.',
                 techStack: 'React, OpenWeather API, Chart.js, CSS3',
                 githubUrl: 'https://github.com/thiyakuprogrammer',
-                liveUrl: 'https://openweathermap.org/',
+                liveUrl: 'https://github.com/thiyakuprogrammer/codexgenz',
                 createdAt: new Date(),
                 updatedAt: new Date()
             },
