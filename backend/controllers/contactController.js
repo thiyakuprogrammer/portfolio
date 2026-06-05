@@ -1,22 +1,31 @@
 const { ContactMessage } = require('../models');
+const { sendSMS } = require('../services/smsService');
 
-// Handle new contact message submission
 exports.submitContactForm = async (req, res) => {
     try {
         const { name, email, message } = req.body;
 
-        // Basic validation
+        // Validation
         if (!name || !email || !message) {
             return res.status(400).json({ error: 'Name, email, and message are required.' });
         }
 
-        const newMessage = await ContactMessage.create({
-            name,
-            email,
-            message,
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            return res.status(400).json({ error: 'Please enter a valid email address.' });
+        }
+
+        // Save to database
+        const newMessage = await ContactMessage.create({ name, email, message });
+
+        // Send SMS notification (non-blocking — won't fail the response if SMS fails)
+        sendSMS({ name, email, message }).catch((err) => {
+            console.error('SMS send error (non-fatal):', err.message);
         });
 
-        res.status(201).json({ message: 'Message sent successfully!', data: newMessage });
+        res.status(201).json({
+            message: 'Message sent successfully! I will get back to you soon.',
+            data: newMessage,
+        });
     } catch (error) {
         console.error('Error submitting contact form:', error);
         res.status(500).json({ error: 'Failed to submit the form. Please try again later.' });

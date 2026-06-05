@@ -1,12 +1,19 @@
 {
   "development": {
-    "dialect": "sqlite",
-    "storage": "./database.sqlite",
+    "username": "root",
+    "password": "12345",
+    "database": "portfolio_db",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql",
     "logging": false
   },
   "test": {
-    "dialect": "sqlite",
-    "storage": "./database_test.sqlite",
+    "username": "root",
+    "password": "12345",
+    "database": "portfolio_db_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
     "logging": false
   },
   "production": {
